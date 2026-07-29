@@ -1,0 +1,54 @@
+[package]
+name = "photon-valence-identity"
+version = "0.1.0"
+edition = "2021"
+description = "Valence IdentityFactory and handler executor for Photon"
+license = "MIT"
+repository = "https://github.com/unified-field-dev/photon-valence-identity"
+publish = false
+
+[lints.rust]
+missing_docs = "deny"
+
+[lints.clippy]
+pedantic = { level = "warn", priority = -1 }
+nursery = { level = "warn", priority = -1 }
+unwrap_used = "deny"
+expect_used = "deny"
+dbg_macro = "deny"
+print_stdout = "deny"
+print_stderr = "deny"
+module_name_repetitions = "allow"
+must_use_candidate = "allow"
+missing_errors_doc = "allow"
+missing_panics_doc = "allow"
+return_self_not_must_use = "allow"
+
+[dependencies]
+photon-core = { package = "uf-photon-core", git = "https://github.com/unified-field-dev/photon", tag = "v0.1.2" }
+photon-backend = { git = "https://github.com/unified-field-dev/photon", tag = "v0.1.2", default-features = false, features = ["mem"] }
+photon-runtime = { git = "https://github.com/unified-field-dev/photon", tag = "v0.1.2", default-features = false, features = ["mem"] }
+photon-telemetry = { git = "https://github.com/unified-field-dev/photon", tag = "v0.1.2" }
+quark = { package = "uf-quark", version = "0.1.1" }
+valence = { package = "uf-valence", git = "https://github.com/unified-field-dev/valence", tag = "v0.1.2", default-features = false, features = ["mem"] }
+spectra-core = { package = "uf-spectra-core", version = "0.1.0" }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1.0"
+anyhow = "1"
+futures = "0.3"
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "sync"] }
+
+[dev-dependencies]
+tokio = { version = "1", features = ["rt-multi-thread", "macros"] }
+photon = { package = "uf-photon", git = "https://github.com/unified-field-dev/photon", tag = "v0.1.2", default-features = false, features = ["mem", "runtime"] }
+photon-telemetry = { git = "https://github.com/unified-field-dev/photon", tag = "v0.1.2", features = ["recording"] }
+serial_test = "3"
+chrono = { version = "0.4", features = ["serde"] }
+futures = "0.3"
+serde_json = "1.0"
+
+[[test]]
+name = "integration_tests"
+
+[[test]]
+name = "instrumentation_operations"
