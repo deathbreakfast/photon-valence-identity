@@ -279,12 +279,11 @@
 //!
 //! ## Examples
 //!
-//! | Level | Where | What |
-//! |-------|-------|------|
-//! | Highlight | Getting started above | In-memory router + [`build_photon_runtime`] |
-//! | Mid | [Valence identity factory](#valence-identity-factory) | Identity-only wiring with upstream Photon |
-//! | Detailed | `wire_factory` | User reconstruct, System reject, [`system_valence()`] |
-//! | Detailed | `persist_actor_recover` | File-persisted actor JSON → executor Valence |
+//! In-memory router + [`build_photon_runtime`] in [Getting started](#getting-started).
+//! Identity-only wiring with upstream Photon in
+//! [Valence identity factory](#valence-identity-factory). Runnable hosts: `wire_factory`
+//! (user reconstruct, System reject, [`system_valence()`]); `persist_actor_recover`
+//! (file-persisted actor JSON → executor Valence).
 //!
 //! ```bash
 //! cargo run -p photon-valence-identity --example wire_factory
