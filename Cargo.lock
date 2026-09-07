@@ -527,8 +527,8 @@ dependencies = [
 
 [[package]]
 name = "photon-backend"
-version = "0.1.3"
-source = "git+https://github.com/unified-field-dev/photon?tag=v0.1.3#cbf3f1d895a0feca76d94c4ff978fb089f48c650"
+version = "0.1.4"
+source = "git+https://github.com/unified-field-dev/photon?branch=main#d8942b609e86cefdfbbf4ad105be7291f8fee908"
 dependencies = [
  "anyhow",
  "async-stream",
@@ -546,15 +546,15 @@ dependencies = [
  "tokio",
  "tracing",
  "uf-photon-core",
- "uf-quark",
+ "uf-quark 0.1.3 (registry+https://github.com/rust-lang/crates.io-index)",
  "uuid",
  "zeroize",
 ]
 
 [[package]]
 name = "photon-macros"
-version = "0.1.3"
-source = "git+https://github.com/unified-field-dev/photon?tag=v0.1.3#cbf3f1d895a0feca76d94c4ff978fb089f48c650"
+version = "0.1.4"
+source = "git+https://github.com/unified-field-dev/photon?branch=main#d8942b609e86cefdfbbf4ad105be7291f8fee908"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -563,8 +563,8 @@ dependencies = [
 
 [[package]]
 name = "photon-runtime"
-version = "0.1.3"
-source = "git+https://github.com/unified-field-dev/photon?tag=v0.1.3#cbf3f1d895a0feca76d94c4ff978fb089f48c650"
+version = "0.1.4"
+source = "git+https://github.com/unified-field-dev/photon?branch=main#d8942b609e86cefdfbbf4ad105be7291f8fee908"
 dependencies = [
  "futures",
  "photon-backend",
@@ -579,8 +579,8 @@ dependencies = [
 
 [[package]]
 name = "photon-telemetry"
-version = "0.1.3"
-source = "git+https://github.com/unified-field-dev/photon?tag=v0.1.3#cbf3f1d895a0feca76d94c4ff978fb089f48c650"
+version = "0.1.4"
+source = "git+https://github.com/unified-field-dev/photon?branch=main#d8942b609e86cefdfbbf4ad105be7291f8fee908"
 dependencies = [
  "serde_json",
 ]
@@ -601,7 +601,7 @@ dependencies = [
  "tokio",
  "uf-photon",
  "uf-photon-core",
- "uf-quark",
+ "uf-quark 0.1.3 (git+https://github.com/unified-field-dev/quark?branch=main)",
  "uf-spectra-core",
  "uf-valence",
 ]
@@ -988,21 +988,21 @@ checksum = "b6f5e870be6c3b371b77fe0ee0bafb859fa4964b4404c27de1d380043c4dda20"
 
 [[package]]
 name = "uf-photon"
-version = "0.1.3"
-source = "git+https://github.com/unified-field-dev/photon?tag=v0.1.3#cbf3f1d895a0feca76d94c4ff978fb089f48c650"
+version = "0.1.4"
+source = "git+https://github.com/unified-field-dev/photon?branch=main#d8942b609e86cefdfbbf4ad105be7291f8fee908"
 dependencies = [
  "photon-backend",
  "photon-macros",
  "photon-runtime",
  "photon-telemetry",
  "uf-photon-core",
- "uf-quark",
+ "uf-quark 0.1.3 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
 name = "uf-photon-core"
-version = "0.1.3"
-source = "git+https://github.com/unified-field-dev/photon?tag=v0.1.3#cbf3f1d895a0feca76d94c4ff978fb089f48c650"
+version = "0.1.4"
+source = "git+https://github.com/unified-field-dev/photon?branch=main#d8942b609e86cefdfbbf4ad105be7291f8fee908"
 dependencies = [
  "serde",
  "serde_json",
@@ -1019,10 +1019,17 @@ dependencies = [
 ]
 
 [[package]]
+name = "uf-quark"
+version = "0.1.3"
+source = "git+https://github.com/unified-field-dev/quark?branch=main#90d70f612926540af402501c94624c2e90a086b8"
+dependencies = [
+ "inventory",
+]
+
+[[package]]
 name = "uf-spectra-core"
-version = "0.1.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "8ba92a216ad609a55263df5678ff919d4ee8e40175c49ec7f543d1ba8e5ac4d2"
+version = "0.1.3"
+source = "git+https://github.com/unified-field-dev/Spectra?branch=main#803049f3033f118263a903bc94c2dd57989a5e17"
 dependencies = [
  "async-trait",
  "chrono",
@@ -1034,14 +1041,13 @@ dependencies = [
  "tokio",
  "toml",
  "tracing",
- "uf-quark",
+ "uf-quark 0.1.3 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
 name = "uf-valence"
-version = "0.1.4"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0ab3fb870f9d861c8403736848281c1dd85318da49e6af9eb23798cb2fdd3206"
+version = "0.1.5"
+source = "git+https://github.com/unified-field-dev/valence?branch=main#7072b14f0c0c9a409b54c699d309118b16805c3e"
 dependencies = [
  "uf-valence-backend-mem",
  "uf-valence-core",
@@ -1050,9 +1056,8 @@ dependencies = [
 
 [[package]]
 name = "uf-valence-backend-mem"
-version = "0.1.4"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b982bf102e9c996933e753ffe0885ec154f9fe96bf4720b6a4533946170eb21a"
+version = "0.1.5"
+source = "git+https://github.com/unified-field-dev/valence?branch=main#7072b14f0c0c9a409b54c699d309118b16805c3e"
 dependencies = [
  "async-trait",
  "serde_json",
@@ -1062,9 +1067,8 @@ dependencies = [
 
 [[package]]
 name = "uf-valence-core"
-version = "0.1.4"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "1c6d011401f604afc430a17cd8a1ffe69b3f690e03e6c7cb817e38e616bf5abd"
+version = "0.1.5"
+source = "git+https://github.com/unified-field-dev/valence?branch=main#7072b14f0c0c9a409b54c699d309118b16805c3e"
 dependencies = [
  "async-trait",
  "chrono",
@@ -1082,9 +1086,8 @@ dependencies = [
 
 [[package]]
 name = "uf-valence-macros"
-version = "0.1.4"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "3856f428cc5ec903ea9288a52e04d9211dd8b34d83c92d76e20daab698bc0a08"
+version = "0.1.5"
+source = "git+https://github.com/unified-field-dev/valence?branch=main#7072b14f0c0c9a409b54c699d309118b16805c3e"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -1094,9 +1097,8 @@ dependencies = [
 
 [[package]]
 name = "uf-valence-schema-dsl"
-version = "0.1.4"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5489cff73d906d4c28b820d9b034edc4844cc4886a1042f395141ed79ee1589e"
+version = "0.1.5"
+source = "git+https://github.com/unified-field-dev/valence?branch=main#7072b14f0c0c9a409b54c699d309118b16805c3e"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -1105,9 +1107,8 @@ dependencies = [
 
 [[package]]
 name = "uf-valence-telemetry"
-version = "0.1.4"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "af28e64e73b9118bc84b75b18a582e452e4d83269993aa02ebdc98518493372a"
+version = "0.1.5"
+source = "git+https://github.com/unified-field-dev/valence?branch=main#7072b14f0c0c9a409b54c699d309118b16805c3e"
 dependencies = [
  "serde_json",
 ]
